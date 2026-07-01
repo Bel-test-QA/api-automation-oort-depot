@@ -1,0 +1,48 @@
+ ██████╗██████╗ ██████╗ ██╗   ██╗██████╗ ██╗ ██████╗ ██╗  ██╗████████╗
+██╔════╝██╔══██╗██╔══██╗╚██╗ ██╔╝██╔══██╗██║██╔════╝ ██║  ██║╚══██╔══╝
+██║     ██████╔╝██████╔╝ ╚████╔╝ ██████╔╝██║██║  ███╗███████║   ██║   
+██║     ██╔═══╝ ██╔═══╝   ╚██╔╝  ██╔══██╗██║██║   ██║██╔══██║   ██║   
+╚██████╗██║     ██║        ██║   ██║  ██║██║╚██████╔╝██║  ██║   ██║   
+ ╚═════╝╚═╝     ╚═╝        ╚═╝   ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   
+                                                                      
+ ██████╗  █████╗ ████████╗███████╗    ██╗     ██╗ ██████╗███████╗███╗   ██╗ ██████╗███████╗
+██╔════╝ ██╔══██╗╚══██╔══╝██╔════╝    ██║     ██║██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝
+██║      ███████║   ██║   █████╗      ██║     ██║██║     █████╗  ██╔██╗ ██║██║     █████╗  
+██║      ██╔══██║   ██║   ██╔══╝      ██║     ██║██║     ██╔══╝  ██║╚██╗██║██║     ██╔══╝  
+╚██████╗ ██║  ██║   ██║   ███████╗    ███████╗██║╚██████╗███████╗██║ ╚████║╚██████╗███████╗
+ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝    ╚══════╝╚═╝ ╚═════╝╚══════╝╚═╝  ╚═══╝ ╚═════╝╚══════╝
+
+========================================================================================
+Copyright (c) 2026 [Аnastasia Belova/Bel-test_QA]. All rights reserved.
+========================================================================================
+
+This repository, including all Postman collections (.json), environment files, 
+Newman CLI configuration scripts, and testing architectures, is the exclusive 
+intellectual property of the author.
+
+TERMS OF USE AND COMPLIANCE:
+----------------------------------------------------------------------------------------
+1. PERMITTED USE (EMPLOYERS ONLY):
+   - Tech leads, hiring managers, and recruiters are FULLY AUTHORIZED to clone, view, 
+     audit, and locally execute the Postman/Newman collections strictly for evaluation 
+     of the author's technical skills during the hiring process.
+
+2. STRICTLY PROHIBITED (PLAGIARISM PROTECTION):
+   - Third-party job seekers, students, and competitors are ABSOLUTELY PROHIBITED from 
+     copying, modifying, or redistributing these collections to their own repositories.
+   - Using this code, architecture, or scripts to pass interviews under your own name 
+     is considered copyright infringement and fraud.
+
+3. COMMERCIAL USE:
+   - Any commercial integration, use in corporate environments, or monetization of this 
+     automation system without prior written consent from the author is strictly prohibited.
+
+========================================================================================
+LEGAL NOTICE & ENFORCEMENT:
+----------------------------------------------------------------------------------------
+Any unauthorized mirroring, scraping, or direct plagiarism detected in public 
+GitHub repositories will be met with an immediate DMCA Takedown Notice filed directly 
+to GitHub Administration, resulting in a permanent strike or ban of the offender's account.
+
+Respect the hard work of others. Build your own portfolio.
+========================================================================================
