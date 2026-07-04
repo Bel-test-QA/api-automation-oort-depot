@@ -1,10 +1,39 @@
-## 🌐 Project 2: API Automation Framework: Security Audit, Stress & Logic | Oort Depot
+## 🌀 Project 2: API Automation Framework: Security Audit, Stress & Logic | Oort Depot
 <h6>Продвинутый инженерный фреймворк автотестов для системы управления складом (WMS), сфокусированный на бизнес-логике, безопасности и отказоустойчивости.
 
 ### 🎯 Project Goal
-Глубокий аудит бизнес-логики, контрактных обязательств API и устойчивости системы к взлому и перегрузкам.
+<h6>Глубокий аудит бизнес-логики, контрактных обязательств API и устойчивости системы к взлому и перегрузкам.</h6>
 
-### 🛠 Architecture & Features
+📖 **Интерактивная документация:** [Посмотреть **Postman Publish Documentation**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
+
+https://www.loom.com/share/bca026426d9246d7b66fce290f61fa38
+
+
+---
+### ⚙️ Repository Structure
+
+```text
+├── .github/workflows/          # CI/CD (GitHub Actions)
+│   └── postman-tests.yml
+├── collections/                # Экспортированные коллекции Postman
+│   └── ultimate_api.postman_collection.json
+├── environments/               # Файлы окружений Postman
+│   └── qa_postman_environment.json
+├── specifications/             # BDD-сценарии (Gherkin)
+│   ├── crud.feature            # СRUD тесты (Positive/Negative)
+│   ├── integration.feature     # Тесты взаимодействия модулей
+│   └── end-to-end.feature      # Сквозные бизнес-сценарии (E2E)
+├── docs/                       # Сопроводительная документация
+│   ├── qa-audit-insights.md    # Аналитический аудит API (Security, OWASP Top 10)
+│   ├── bug-reports.md          # Логи багов Jira со скриншотами
+│   ├── performance-testing.md  # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное тестирование
+│   └── static-reports/         # Идеальные эталонные отчеты
+│       ├── perfect-newman.html 
+│       └── allure-report.zip   
+└── README.md                   # Главный путеводитель по проекту
+```
+
+### ⚡️ Architecture & Features
 * **Zero Hardcode Logic:** Полное отсутствие статических данных. Все ID, токены и параметры генерируются динамически и передаются по цепочке (Chaining).
 * **Performance:** Нагрузочное тестирование (Stress Testing) через параллельный запуск 10 инстансов Newman.
 * **Security & SQLi:** Тестирование по стандартам `OWASP API Security Top 10`, включая проверку на SQL-инъекции.
@@ -15,23 +44,24 @@
 * **BDD подход (Gherkin):** Сценарии написаны как исполняемые спецификации (`Given / When / Then`), что делает их прозрачными для бизнеса и готовыми к миграции на Cucumber/SpecFlow.
 * **Mocking Service:** Использование Postman Mock Server для симуляции сложных логистических сценариев.
 
-### ⚙️ Repository Structure
 
-```text
-├── introduction/           # Шаг 0: Введение, описание объекта тестирования, цели тестрования.
-├── checklists/             # Шаг 1: Приложение А — Чек-лист тестирования формы регистрации
-├── test-cases/             # Шаг 2: Набор детальных тест-кейсов 
-├── bug-reports/            # Шаг 3: Оформленные баг-репорты и Приложение Б (категории дефектов)
-├── test-metrics/           # Шаг 4: Приложение В — Тестовые метрики 
-├── test-summary/           # Шаг 5: Заключение — Сводный отчет о результатах тестирования (TSR)
-├── full-project/           # Итог: Полная версия аттестационной работы от Введения до Приложений
-└── project-defense/        # Демо: Видеозапись защиты проекта и официальный сертификат ТГУ
-```
 
-## 🛠️ Архитектура и Технологический стек (Tech Stack)
-
-Проект представляет собой автономный **API Automation Framework**, построенный на базе следующего стека:
+### 🛠 Tech Stack
+<h6>Проект представляет собой автономный **API Automation Framework**, построенный на базе следующего стека:</h6>
 * **Postman** — среда разработки автотестов, тест-дизайна и валидации контрактов.
-* **JavaScript (Sandbox)** — написание динамических скриптов, pre-request сценариев, кастомных ассертов и цепочек авторизации (Chaining).
+* **JavaScript ** — написание динамических скриптов, pre-request сценариев, кастомных ассертов и цепочек авторизации (Chaining).
 * **Newman CLI** — консольный раннер для запуска коллекций в изолированном окружении [postman-tests.yml].
 * **GitHub Actions** — CI/CD пайплайн для автоматического запуска регрессионного тестирования при пушах [postman-tests.yml, postman-tests.yml].
+
+
+
+
+
+
+
+
+
+
+
+
+
