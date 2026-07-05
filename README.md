@@ -5,8 +5,9 @@
 <h6>Глубокий аудит бизнес-логики, контрактных обязательств API и устойчивости системы к взлому и перегрузкам.</h6>
 
 📖 **Интерактивная документация:** [Посмотреть **Postman Publish Documentation**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
+📺 Краткий видео-обзор проекта
 
-https://www.loom.com/share/bca026426d9246d7b66fce290f61fa38
+![Обзор коллекции Postman](./docs/images/video-preview.gif)
 
 
 ---
