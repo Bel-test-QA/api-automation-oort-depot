@@ -6,7 +6,10 @@ Feature: CRUD операции
   # =========================================================================
   Rule: 006 — Успешное управление звездолетами (CRUD)
 
-    @starship-module @US-006 @crud @positive
+    @starship-module
+    @US-006
+    @crud
+    @positive
     Scenario: Успешный цикл жизни объекта звездолет
       When я отправляю POST запрос на создание звездолета с именем "{{$randomCurrencyName}}"
       Then система возвращает статус 201 и ID объекта "{{newShipId}}"
