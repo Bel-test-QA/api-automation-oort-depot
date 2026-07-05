@@ -1,17 +1,15 @@
 ## 🌀 Project 2: API Automation Framework: Security Audit, Stress & Logic | Oort Depot
-<h6>Продвинутый инженерный фреймворк автотестов для системы управления складом (WMS), сфокусированный на бизнес-логике, безопасности и отказоустойчивости.
 
-### 🎯 Project Goal
+Продвинутый инженерный фреймворк автотестов для системы управления складом (WMS), сфокусированный на бизнес-логике, безопасности и отказоустойчивости.
+
+##  ☑️ Project Goal
 <h6>Глубокий аудит бизнес-логики, контрактных обязательств API и устойчивости системы к взлому и перегрузкам.</h6>
 
-📖 **Интерактивная документация:** [Посмотреть **Postman Publish Documentation**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
-📺 Краткий видео-обзор проекта
+## **Interactive API Docs:** [Посмотреть **Postman Publish Documentation**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
+&nbsp;&nbsp;
+![Uploading giphy.gif…](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHY2ZHhjemNhNmc5bWZtOGRwOWdsOTd0MTcwZXFicjFkbWplZnB5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SZPSgFFbSTFEn6dTHh/giphy.gif)
 
-![Обзор коллекции Postman](.Ultimate API Quality Gate [Oort Depot] - Quck video-review.mp4)
-
-
-
-
+---
 ---
 ### ⚙️ Repository Structure
 
@@ -30,9 +28,11 @@
 │   ├── qa-audit-insights.md    # Аналитический аудит API (Security, OWASP Top 10)
 │   ├── bug-reports.md          # Логи багов Jira со скриншотами
 │   ├── performance-testing.md  # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное тестирование
-│   └── static-reports/         # Идеальные эталонные отчеты
+│   ├── static-reports          # Идеальные эталонные отчеты
 │       ├── perfect-newman.html 
-│       └── allure-report.zip   
+│       └── allure-report.zip
+│   └── images                  # Медиа-артефакты проекта
+│       ├── overview.gif  
 └── README.md                   # Главный путеводитель по проекту
 ```
 
