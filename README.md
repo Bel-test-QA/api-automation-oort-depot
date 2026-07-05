@@ -1,5 +1,5 @@
 
-## 🌀 Project 2: API Automation Framework: Security Audit, Stress & Logic | Oort Depot
+## 🌀 Project 1: API Automation Framework: Security Audit, Stress & Logic | Oort Depot
 
 Продвинутый инженерный фреймворк автотестов для системы управления складом (WMS), сфокусированный на бизнес-логике, безопасности и отказоустойчивости.
 
