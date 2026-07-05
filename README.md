@@ -7,7 +7,7 @@
 📖 **Интерактивная документация:** [Посмотреть **Postman Publish Documentation**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
 📺 Краткий видео-обзор проекта
 
-![Обзор коллекции Postman](./docs/images/video-preview.gif)
+![Обзор коллекции Postman](.Ultimate API Quality Gate [Oort Depot] - Quck video-review.mp4)
 
 
 ---
