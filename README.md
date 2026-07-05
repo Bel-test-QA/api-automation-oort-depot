@@ -6,10 +6,14 @@
 <h6>Глубокий аудит бизнес-логики, контрактных обязательств API и устойчивости системы к взлому и перегрузкам.</h6>
 
 ## **Interactive API Docs:** [Посмотреть **Postman Publish Documentation**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
-&nbsp;&nbsp;
+&nbsp;
+
 ![Uploading giphy.gif…](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHY2ZHhjemNhNmc5bWZtOGRwOWdsOTd0MTcwZXFicjFkbWplZnB5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SZPSgFFbSTFEn6dTHh/giphy.gif)
 
----
+&nbsp;
+
+
+
 ---
 ### ⚙️ Repository Structure
 
