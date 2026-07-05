@@ -1,3 +1,4 @@
+
 ## 🌀 Project 2: API Automation Framework: Security Audit, Stress & Logic | Oort Depot
 
 Продвинутый инженерный фреймворк автотестов для системы управления складом (WMS), сфокусированный на бизнес-логике, безопасности и отказоустойчивости.
@@ -5,16 +6,18 @@
 ##  ☑️ Project Goal
 <h6>Глубокий аудит бизнес-логики, контрактных обязательств API и устойчивости системы к взлому и перегрузкам.</h6>
 
-## **Interactive API Docs:** [Посмотреть **Postman Publish Documentation**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
-&nbsp;
+## **Interactive API Docs:** [🗲 **Postman Publish Documentation 🗲 Ultimate API Quality Gate | Oort Depot**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
+<h6>Для быстрой оценки масштаба фреймворка, архитектуры папок и живого интерфейса коллекции без импорта файлов.</h6>
 
 ![Uploading giphy.gif…](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHY2ZHhjemNhNmc5bWZtOGRwOWdsOTd0MTcwZXFicjFkbWplZnB5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SZPSgFFbSTFEn6dTHh/giphy.gif)
 
-&nbsp;
+## **Interactive Workspace:** [🗲 **Postman Workspace 🗲 API Automation Framework: Security Audit, Stress & Logic | Oort Depot**](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot)
+<h6>Для проведения сквозного анализа архитектуры тестов и выполнения запросов в реальном времени развернуто публичное облачное пространство.</h6>.
 
-
+![Uploading giphy.gif2…](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanVubGx4ODZnZ2ZzdzN1NXJ1ZnE4Y281cGY1M3Ztcnc5ZmJ4ZThrOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/axbvhv7X8mvOCpj5fx/giphy.gif)
 
 ---
+
 ### ⚙️ Repository Structure
 
 ```text
@@ -62,7 +65,7 @@
 
 
 
-
+&nbsp;
 
 
 
