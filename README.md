@@ -18,7 +18,7 @@
 
 ---
 
-### ⚙️ Repository Structure
+## ⚙️ Repository Structure
 
 ```text
 ├── .github/workflows/          # CI/CD (GitHub Actions)
@@ -42,7 +42,8 @@
 │       ├── overview.gif  
 └── README.md                   # Главный путеводитель по проекту
 ```
-### 🧩 Tech Stack
+
+## 🧩 Tech Stack
 <h6>Проект представляет собой автономный **API Automation Framework**, построенный на базе следующего стека:</h6>
 
 <p align="left"> <img src="https://img.shields.io/badge/-Postman-282C34?style=plastic&logo=postman&logoColor=FF6C37"/> <img src="https://img.shields.io/badge/-JavaScript-282C34?style=plastic&logo=javascript&logoColor=F7DF1E"/> <img src="https://img.shields.io/badge/-NPM-282C34?style=plastic&logo=NPM&logoColor=CB3837"/> <img src="https://img.shields.io/badge/-Node.js-282C34?style=plastic&logo=nodedotjs&logoColor=5FA04E"/> <img src="https://img.shields.io/badge/-NewmanCLI-FF6C37?style=plastic&logo&color=282C34"/> <img src="https://img.shields.io/badge/-GitHubActions-282C34?style=plastic&logo=githubactions&logoColor=2088FF"/></p>
@@ -53,7 +54,7 @@
 * **GitHub Actions** — CI/CD пайплайн для автоматического запуска регрессионного тестирования при пушах [postman-tests.yml, postman-tests.yml].
 
 
-### ⚡️ Architecture & Features
+## ⚡️ Architecture & Features
 * **Zero Hardcode Logic:** Полное отсутствие статических данных. Все ID, токены и параметры генерируются динамически и передаются по цепочке (Chaining).
 * **Performance:** Нагрузочное тестирование (Stress Testing) через параллельный запуск 10 инстансов Newman.
 * **Security & SQLi:** Тестирование по стандартам `OWASP API Security Top 10`, включая проверку на SQL-инъекции.
