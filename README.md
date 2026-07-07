@@ -77,9 +77,10 @@
 
 **Интерактивная документация:** Перейдите в публичное рабочее пространство [Postman Public Workspace](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot) или откройте [Postman Web Documentation](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7), чтобы изучить структуру запросов прямо в браузере.
 > [!IMPORTANT]
-> **Эталонный отчет о тестировании:** Так как тестовая песочница (тестовый стенд) периодически обновляется или может быть временно недоступна (статус код 5xx), вы можете посмотреть и скачать файл прогона без ложноположительных результатов (false positive):
+> **Эталонный отчет о тестировании:**
+> Так как публичная тестовая песочница (тестовый стенд) периодически обновляется сторонними пользователями, статические тестовые данные имеют свойство устаревать, что может приводить к ложноположительным результатам (False Positive):
    * [Посмотреть/скачать идеальный HTML-отчет Newman](./docs/static-reports/perfect-newman.html).
-   * Ознакомиться с экспертными выводами в документе [QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md).
+   * [Ознакомиться с экспертными выводами QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md).
    
 ---
 
@@ -88,8 +89,8 @@
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone https://github.com
-   cd ВАШ_РЕПОЗИТОРИЙ
+   git clone https://github.com/Bel-test-QA/api-automation-oort-depot.git
+   cd api-automation-oort-depot
    ```
 2. **Установите [Node.js](https://nodejs.org/en) v18+**, если она еще не установлена на вашем ПК.
 3. **Установите Newman** (консольный раннер Postman) и репортер для красивых отчетов:
