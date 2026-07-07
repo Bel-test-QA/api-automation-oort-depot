@@ -78,6 +78,7 @@
 **Интерактивная документация:** Перейдите в публичное рабочее пространство [Postman Public Workspace](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot) или откройте [Postman Web Documentation](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7), чтобы изучить структуру запросов прямо в браузере.
 > [!IMPORTANT]
 > **Эталонный отчет о тестировании:**
+> 
 > Так как публичная тестовая песочница (тестовый стенд) периодически обновляется сторонними пользователями, статические тестовые данные имеют свойство устаревать, что может приводить к ложноположительным результатам (False Positive):
    * [Посмотреть/скачать идеальный 🗲 HTML-отчет Newman](./docs/static-reports/perfect-newman.html).
    * [Ознакомиться с экспертными выводами 🗲 QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md).
