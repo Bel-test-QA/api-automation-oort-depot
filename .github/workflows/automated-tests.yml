@@ -1,7 +1,7 @@
 name: Automated Postman Tests
 
 on:
-  workflow_dispatch: # Только ручной запуск по кнопке на сайте
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -54,12 +54,10 @@ jobs:
         allure_history: allure-history
         keep_reports: 20
 
-        - name: Deploy Allure Report to GitHub Pages
+    - name: Deploy Allure Report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: always()
       with:
         personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         publish_branch: gh-pages
         publish_dir: allure-history
-
-
