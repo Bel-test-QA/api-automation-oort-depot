@@ -1,14 +1,12 @@
 name: Automated Postman Tests
 
-# 1. Триггеры: когда запускать пайплайн
 on:
   push:
-    branches: [ "main", "master" ] # Запуск при каждом пуше в главную ветку
+    branches: [ "main", "master" ]
   pull_request:
-    branches: [ "main" ]          # Запуск при создании PR
-  workflow_dispatch:              # Та самая зеленая кнопка "Run workflow" для ручного запуска
+    branches: [ "main" ]
+  workflow_dispatch:
 
-# Разрешения для работы с GitHub Pages (чтобы Allure-отчет опубликовался сайтом)
 permissions:
   contents: read
   pages: write
@@ -16,42 +14,36 @@ permissions:
 
 jobs:
   test-automation:
-    runs-on: ubuntu-latest # Арендуем чистую виртуалку на Linux
+    runs-on: ubuntu-latest
 
     steps:
-    # Шаг 1: Скачиваем твой код из репозитория на виртуалку
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # Шаг 2: Устанавливаем Node.js 18 версии
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: 18
         cache: 'npm'
 
-    # Шаг 3: Устанавливаем зависимости (Newman и репортеры)
     - name: Install Newman and Reporters
       run: |
         npm install -g newman
         npm install -g newman-reporter-htmlextra
         npm install -g newman-reporter-allure
 
-    # Шаг 4: Запускаем тесты и генерируем ОБА отчета (и htmlextra, и allure)
     - name: Run Postman Tests
       run: |
         newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,htmlextra,allure --reporter-allure-export allure-results
-      continue-on-error: true # Важно! Даже если тесты упадут из-за багов, пайплайн не прервется и отчеты соберутся
+      continue-on-error: true
 
-    # Шаг 5: Сохраняем htmlextra отчет как артефакт (файл для скачивания)
     - name: Upload htmlextra Report Artifact
       uses: actions/upload-artifact@v4
       with:
         name: postman-html-report
         path: newman/
-        retention-days: 5 # Сколько дней файл будет доступен для скачивания
+        retention-days: 5
 
-    # Шаг 6: Генерируем красивую веб-страницу Allure из сырых результатов
     - name: Get Allure history
       uses: actions/checkout@v4
       if: always()
@@ -59,7 +51,6 @@ jobs:
         ref: gh-pages
         path: gh-pages
 
-    # Специальный готовый экшн для сборки Allure
     - name: Build Allure Report
       uses: simple-elf/allure-report-action@master
       if: always()
@@ -68,7 +59,6 @@ jobs:
         allure_history: allure-history
         keep_reports: 20
 
-    # Шаг 7: Публикуем Allure прямо на GitHub Pages (он станет доступен по ссылке)
     - name: Deploy Allure Report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: always()
