@@ -36,10 +36,12 @@
 │   ├── bug-reports.md          # Логи багов Jira со скриншотами
 │   ├── performance-testing.md  # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное тестирование
 │   ├── static-reports          # Идеальные эталонные отчеты
-│       ├── perfect-newman.html 
-│       └── allure-report.zip
-│   └── images                  # Медиа-артефакты проекта
-│       ├── overview.gif  
+│       └── perfect-newman.html 
+├── scripts/
+│   ├── stress-test.ps1         # [Windows] Скрипт параллельного запуска 10 визуальных окон
+│   └── stress-test.sh          # [macOS/Linux] Скрипт параллельного запуска 10 фоновых потоков
+├── .gitignore                  # Список файлов и папок, скрытых от отправки на GitHub 
+├── package.json                # Конфигурация Node.js и скрипты запуска всего фреймворка
 └── README.md                   # Главный путеводитель по проекту
 ```
 
