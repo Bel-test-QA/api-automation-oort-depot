@@ -1,7 +1,0 @@
-"scripts": {
-  "test": "newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,htmlextra",
-  "test:allure": "newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,allure",
-  "allure:open": "allure serve allure-results",
-  "test:stress:win": "powershell -ExecutionPolicy Bypass -File scripts/stress-test.ps1",
-  "test:stress:mac": "bash scripts/stress-test.sh"
-}
