@@ -70,7 +70,7 @@ jobs:
 
     # Шаг 7: Публикуем Allure прямо на GitHub Pages (он станет доступен по ссылке)
     - name: Deploy Allure Report to GitHub Pages
-      uses: peaceiris/actions-gh-page@v3
+      uses: peaceiris/actions-gh-pages@v3
       if: always()
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
