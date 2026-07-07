@@ -95,11 +95,6 @@
    npm install -g newman
    npm install -g newman-reporter-htmlextra
    ```
-4. **Запустите тесты одной командой:**
-   ```bash
-   newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,htmlextra
-   ```
-   *После окончания прогона в корне проекта появится папка `newman/` с вашим локальным HTML-отчетом.*
 
 4. **Запустите тесты одной командой:**
 
@@ -107,9 +102,13 @@
      ```bash
      npm run test
      ```
-     После окончания прогона в корне проекта появится папка `newman/` с локальным HTML-отчетом.
-*(Полная команда: `newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,htmlextra`)*
-
+     *После окончания прогона в корне проекта появится папка `newman/` с локальным HTML-отчетом.*
+     
+      *Полная команда:*
+    ```bash
+    newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,htmlextra`
+    ```
+  
    * **Продвинутый отчет Allure Report**
      Для этого у вас на ПК должен быть установлен Allure CLI (`brew install allure` на Mac или `scoop install allure` на Win).
      Запустите сбор результатов, а затем откройте отчет:
@@ -118,7 +117,6 @@
      npm run allure:open
      ```
      В браузере автоматически откроется интерактивный Allure-отчет.
-
 
 
 ---
