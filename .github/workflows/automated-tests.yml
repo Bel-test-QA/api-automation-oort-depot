@@ -3,11 +3,6 @@ name: Automated Postman Tests
 on:
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   test-automation:
     runs-on: ubuntu-latest
@@ -26,6 +21,7 @@ jobs:
         npm install -g newman
         npm install -g newman-reporter-htmlextra
         npm install -g newman-reporter-allure
+        npm install -g allure-commandline
 
     - name: Run Postman Tests
       run: |
@@ -39,25 +35,14 @@ jobs:
         path: newman/
         retention-days: 5
 
-    - name: Get Allure history
-      uses: actions/checkout@v4
+    - name: Build Allure Report Static HTML
+      run: |
+        allure generate allure-results --clean -o allure-report
       if: always()
-      with:
-        ref: gh-pages
-        path: gh-pages
 
-    - name: Build Allure Report
-      uses: simple-elf/allure-report-action@master
-      if: always()
+    - name: Upload Allure Report Artifact
+      uses: actions/upload-artifact@v4
       with:
-        allure_results: allure-results
-        allure_history: allure-history
-        keep_reports: 20
-
-    - name: Deploy Allure Report to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: always()
-      with:
-        personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        publish_branch: gh-pages
-        publish_dir: allure-history
+        name: allure-report
+        path: allure-report/
+        retention-days: 5
