@@ -73,12 +73,12 @@
 ### 🌐 Быстрый просмотр (без установки Git)
 <h6>Подходит для рекрутеров и менеджеров.</h6>
 
-1. **Интерактивная документация:** Перейдите в публичное рабочее пространство [Postman Public Workspace](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot) или откройте [Postman Web Documentation](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7), чтобы изучить структуру запросов прямо в браузере.
-2. **Эталонные отчеты о тестировании:** Так как тестовая песочница (тестовый стенд) периодически обновляется или может быть временно недоступна, вы можете посмотреть и скачать файлы успешных прогонов со всеми зелеными чек-боксами в папке проекта [docs/static-reports](./docs/static-reports):
-   * [Посмотреть идеальный HTML-отчет Newman](./docs/static-reports/perfect-newman.html) (скачайте файл и откройте в браузере).
+**Интерактивная документация:** Перейдите в публичное рабочее пространство [Postman Public Workspace](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot) или откройте [Postman Web Documentation](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7), чтобы изучить структуру запросов прямо в браузере.
+> [!IMPORTANT]
+> **Эталонный отчет о тестировании:** Так как тестовая песочница (тестовый стенд) периодически обновляется или может быть временно недоступна (статус код 5xx), вы можете посмотреть и скачать файл прогона без ложноположительных результатов (false positive):
+   * [Посмотреть/скачать идеальный HTML-отчет Newman](./docs/static-reports/perfect-newman.html).
    * Ознакомиться с экспертными выводами в документе [QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md).
-</details>
-
+   
 ---
 
 ### 🐙 Полное клонирование проекта (через Git)
@@ -89,7 +89,7 @@
    git clone https://github.com
    cd ВАШ_РЕПОЗИТОРИЙ
    ```
-2. **Установите Node.js** (версия 18 или выше), если она еще не установлена на вашем ПК.
+2. **Установите [Node.js](https://nodejs.org/en) v18+**, если она еще не установлена на вашем ПК.
 3. **Установите Newman** (консольный раннер Postman) и репортер для красивых отчетов:
    ```bash
    npm install -g newman
@@ -100,6 +100,26 @@
    newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,htmlextra
    ```
    *После окончания прогона в корне проекта появится папка `newman/` с вашим локальным HTML-отчетом.*
+
+4. **Запустите тесты одной командой:**
+
+   * **Обычный HTML-отчет (через htmlextra)**
+     ```bash
+     npm run test
+     ```
+     После окончания прогона в корне проекта появится папка `newman/` с локальным HTML-отчетом.
+*(Полная команда: `newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,htmlextra`)*
+
+   * **Продвинутый отчет Allure Report**
+     Для этого у вас на ПК должен быть установлен Allure CLI (`brew install allure` на Mac или `scoop install allure` на Win).
+     Запустите сбор результатов, а затем откройте отчет:
+     ```bash
+     npm run test:allure
+     npm run allure:open
+     ```
+     В браузере автоматически откроется интерактивный Allure-отчет.
+
+
 
 ---
 
