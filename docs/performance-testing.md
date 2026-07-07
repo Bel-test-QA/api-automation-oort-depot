@@ -14,7 +14,7 @@
 > [!NOTE]
 > *Подробная инструкция по ручному запуску этого профиля внутри **Postman***: [Performance Testing](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/46upf7m/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf)
 
-### 🚀 🏋️‍♂️ ⏱ Имитация стресс-нагрузки и проверка Rate Limiting (CLI Скрипты)
+### 🧨 Имитация стресс-нагрузки и проверка Rate Limiting (CLI Скрипты)
 <h6>Для проверки стабильности сервера при массовом спаме запросов, удержания соединений (`ECONNRESET`) и корректности выдачи ошибки `429 Too Many Requests` разработаны автоматические скрипты параллельного запуска.</h6>
 
 **Они имитируют многопоточную нагрузку, запуская 10 независимых потоков Newman CLI одновременно:**
