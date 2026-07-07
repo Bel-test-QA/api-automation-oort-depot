@@ -75,7 +75,10 @@
 ### 🌐 Быстрый просмотр (без установки Git)
 <h6>Подходит для рекрутеров и менеджеров.</h6>
 
-**Интерактивная документация:** Перейдите в публичное рабочее пространство [Postman Public Workspace](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot) или откройте [Postman Web Documentation](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7), чтобы изучить структуру запросов прямо в браузере.
+**Интерактивная документация:** Чтобы изучить структуру запросов прямо в браузере.
+* Перейти в публичное рабочее пространство [Postman Public Workspace](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot)
+* Открыть [Postman Web Documentation](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
+
 > [!IMPORTANT]
 > **Эталонный отчет о тестировании:**
 > 
