@@ -38,11 +38,18 @@
 │   ├── static-reports          # Идеальные эталонные отчеты
 │       └── perfect-newman.html 
 ├── scripts/
-│   ├── stress-test.ps1         # [Windows] Скрипт параллельного запуска 10 визуальных окон
-│   └── stress-test.sh          # [macOS/Linux] Скрипт параллельного запуска 10 фоновых потоков
-├── .gitignore                  # Список файлов и папок, скрытых от отправки на GitHub 
-├── package.json                # Конфигурация Node.js и скрипты запуска всего фреймворка
-└── README.md                   # Главный путеводитель по проекту
+│   ├── stress-test.ps1             # [Windows] Скрипт параллельного запуска 10 визуальных окон
+│   ├── stress-test.sh              # [macOS/Linux] Скрипт параллельного запуска 10 фоновых потоков
+│   └── postman-js-framework/       # Примеры чистого JavaScript-кода (Chai.js) для код-ревью
+│       ├── crud-and-contracts.js            # Тесты CRUD-операций и контрактных проверок
+│       ├── integration-and-e2e.js           # Интеграционные сценарии и сквозные бизнес-тесты
+│       ├── security-owasp-audit.js          # Тестирование безопасности (BOLA, SQLi, OWASP Top 10)
+│       ├── network-transport-checks.js      # Проверки сетевого и транспортного уровней
+│       └── performance-and-ratelimits.js    # Проверка лимитов, нагрузочное и стресс-тестирование
+├── .gitignore                      # Список файлов и папок, скрытых от отправки на GitHub 
+├── package.json                    # Конфигурация Node.js и скрипты запуска всего фреймворка
+└── README.md                       # Главный путеводитель по проекту
+
 ```
 
 ## ☄️ Tech Stack
