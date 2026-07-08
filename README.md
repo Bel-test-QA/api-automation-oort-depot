@@ -35,8 +35,7 @@
 │   ├── qa-audit-insights.md                 # Аналитический аудит API (Security, OWASP Top 10)
 │   ├── bug-reports.md                       # Логи багов Jira со скриншотами
 │   ├── performance-testing.md               # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное тестирование
-│   ├── static-reports                       # Идеальные эталонные отчеты
-│       └── perfect-newman.html              # Newman Summary report (без ложноположительных результатов)
+│   └── index.html                           # Интерактивный Newman Summary report (GitHub Pages)
 ├── scripts/                                 # Папка исполняемых скриптов и примеров кода
 │   ├── stress-test.ps1                      # [Windows] Скрипт параллельного запуска 10 визуальных окон
 │   ├── stress-test.sh                       # [macOS/Linux] Скрипт параллельного запуска 10 фоновых потоков
@@ -87,10 +86,10 @@
 * Открыть [Postman Web Documentation](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
 
 > [!IMPORTANT]
-> **Эталонный отчет о тестировании:**
+> **Эталонный отчет о тестировании (GitHub Pages):**
 > 
 > Так как публичная тестовая песочница (тестовый стенд) периодически обновляется сторонними пользователями, статические тестовые данные имеют свойство устаревать, что может приводить к ложноположительным результатам (False Positive):
-   * [Посмотреть/скачать идеальный 🗲 HTML-отчет Newman](./docs/static-reports/perfect-newman.html).
+   * [Открыть интерактивный 🗲 HTML-отчет Newman](https://bel-test-qa.github.io/api-automation-oort-depot/).
    * [Ознакомиться с экспертными выводами 🗲 QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md).
    
 ---
