@@ -1,5 +1,5 @@
 
-## 🌌 Project 1: API Automation Framework: Security Audit, Stress & Logic | Oort Depot
+## 💎 Project 1: API Automation Framework: Security Audit, Stress & Logic | Oort Depot
 
 Продвинутый инженерный фреймворк автотестов для системы управления складом (WMS), сфокусированный на бизнес-логике, безопасности и отказоустойчивости.
 
@@ -51,7 +51,7 @@
 
 ```
 
-## 💎 Tech Stack
+## 🧠 Tech Stack
 <p align="left"> <img src="https://img.shields.io/badge/-Postman-282C34?style=plastic&logo=postman&logoColor=FF6C37"/> <img src="https://img.shields.io/badge/-JavaScript-282C34?style=plastic&logo=javascript&logoColor=F7DF1E"/> <img src="https://img.shields.io/badge/-NPM-282C34?style=plastic&logo=NPM&logoColor=CB3837"/> <img src="https://img.shields.io/badge/-Node.js-282C34?style=plastic&logo=nodedotjs&logoColor=5FA04E"/> <img src="https://img.shields.io/badge/-NewmanCLI-FF6C37?style=plastic&logo&color=282C34"/> <img src="https://img.shields.io/badge/-GitHubActions-282C34?style=plastic&logo=githubactions&logoColor=2088FF"/></p>
 
 <h6>Проект представляет собой автономный API Automation Framework, построенный на базе следующего стека:</h6>
