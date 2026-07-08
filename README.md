@@ -28,14 +28,14 @@
 ├── environments/               # Файлы окружений Postman
 │   └── qa_postman_environment.json
 ├── specifications/             # BDD-сценарии (Gherkin)
-│   ├── crud.feature            # СRUD тесты (User Stories: US006-US013)
-│   ├── integration.feature     # Тесты взаимодействия модулей (User Stories: US-014)
-│   └── end-to-end.feature      # Сквозные бизнес-сценарии (User Stories: US-015)
+│   ├── crud.feature                # СRUD тесты (User Stories: US006-US013)
+│   ├── integration.feature         # Тесты взаимодействия модулей (User Stories: US-014)
+│   └── end-to-end.feature          # Сквозные бизнес-сценарии (User Stories: US-015)
 ├── docs/                       # Сопроводительная документация
-│   ├── qa-audit-insights.md    # Аналитический аудит API (Security, OWASP Top 10)
-│   ├── bug-reports.md          # Логи багов Jira со скриншотами
-│   ├── performance-testing.md  # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное тестирование
-│   ├── static-reports          # Идеальные эталонные отчеты
+│   ├── qa-audit-insights.md        # Аналитический аудит API (Security, OWASP Top 10)
+│   ├── bug-reports.md              # Логи багов Jira со скриншотами
+│   ├── performance-testing.md      # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное тестирование
+│   ├── static-reports              # Идеальные эталонные отчеты
 │       └── perfect-newman.html 
 ├── scripts/
 │   ├── stress-test.ps1             # [Windows] Скрипт параллельного запуска 10 визуальных окон
@@ -46,9 +46,9 @@
 │       ├── security-owasp-audit.js          # Тестирование безопасности (BOLA, SQLi, OWASP Top 10)
 │       ├── network-transport-checks.js      # Проверки сетевого и транспортного уровней
 │       └── performance-and-ratelimits.js    # Проверка лимитов, нагрузочное и стресс-тестирование
-├── .gitignore                      # Список файлов и папок, скрытых от отправки на GitHub 
-├── package.json                    # Конфигурация Node.js и скрипты запуска всего фреймворка
-└── README.md                       # Главный путеводитель по проекту
+├── .gitignore                    # Список файлов и папок, скрытых от отправки на GitHub 
+├── package.json                  # Конфигурация Node.js и скрипты запуска всего фреймворка
+└── README.md                     # Главный путеводитель по проекту
 
 ```
 
