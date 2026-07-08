@@ -36,7 +36,7 @@
 │   ├── bug-reports.md                       # Логи багов Jira со скриншотами
 │   ├── performance-testing.md               # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное тестирование
 │   ├── static-reports                       # Идеальные эталонные отчеты
-│       └── perfect-newman.html              # HTML-report
+│       └── perfect-newman.html              # Newman Summary report (без ложноположительных результатов)
 ├── scripts/                                 # Папка исполняемых скриптов и примеров кода
 │   ├── stress-test.ps1                      # [Windows] Скрипт параллельного запуска 10 визуальных окон
 │   ├── stress-test.sh                       # [macOS/Linux] Скрипт параллельного запуска 10 фоновых потоков
