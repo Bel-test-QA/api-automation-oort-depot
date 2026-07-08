@@ -21,34 +21,34 @@
 ## ⚙️ Repository Structure
 
 ```text
-├── .github/workflows/          # CI/CD (GitHub Actions)
-│   └── postman-tests.yml
-├── collections/                # Экспортированные коллекции Postman
+├── .github/workflows/                     # CI/CD (GitHub Actions)
+│   └── postman-tests.yml                  # Сценарий автоматического запуска тестов в GitHub Actions
+├── collections/                           # Экспортированные коллекции Postman
 │   └── ultimate_api.postman_collection.json
-├── environments/               # Файлы окружений Postman
+├── environments/                          # Файлы окружений Postman
 │   └── qa_postman_environment.json
-├── specifications/             # BDD-сценарии (Gherkin)
-│   ├── crud.feature                # СRUD тесты (User Stories: US006-US013)
-│   ├── integration.feature         # Тесты взаимодействия модулей (User Stories: US-014)
-│   └── end-to-end.feature          # Сквозные бизнес-сценарии (User Stories: US-015)
-├── docs/                       # Сопроводительная документация
-│   ├── qa-audit-insights.md        # Аналитический аудит API (Security, OWASP Top 10)
-│   ├── bug-reports.md              # Логи багов Jira со скриншотами
-│   ├── performance-testing.md      # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное тестирование
-│   ├── static-reports              # Идеальные эталонные отчеты
-│       └── perfect-newman.html 
-├── scripts/
-│   ├── stress-test.ps1             # [Windows] Скрипт параллельного запуска 10 визуальных окон
-│   ├── stress-test.sh              # [macOS/Linux] Скрипт параллельного запуска 10 фоновых потоков
-│   └── postman-js-framework/       # Примеры чистого JavaScript-кода (Chai.js) для код-ревью
-│       ├── crud-and-contracts.js            # Тесты CRUD-операций и контрактных проверок
-│       ├── integration-and-e2e.js           # Интеграционные сценарии и сквозные бизнес-тесты
-│       ├── security-owasp-audit.js          # Тестирование безопасности (BOLA, SQLi, OWASP Top 10)
-│       ├── network-transport-checks.js      # Проверки сетевого и транспортного уровней
-│       └── performance-and-ratelimits.js    # Проверка лимитов, нагрузочное и стресс-тестирование
-├── .gitignore                  # Список файлов и папок, скрытых от отправки на GitHub 
-├── package.json                # Конфигурация Node.js и скрипты запуска всего фреймворка
-└── README.md                   # Главный путеводитель по проекту
+├── specifications/                        # BDD-сценарии (Gherkin)
+│   ├── crud.feature                       # СRUD тесты (User Stories: US006-US013)
+│   ├── integration.feature                # Тесты взаимодействия модулей (User Stories: US-014)
+│   └── end-to-end.feature                 # Сквозные бизнес-сценарии (User Stories: US-015)
+├── docs/                                  # Сопроводительная документация
+│   ├── qa-audit-insights.md               # Аналитический аудит API (Security, OWASP Top 10)
+│   ├── bug-reports.md                     # Логи багов Jira со скриншотами
+│   ├── performance-testing.md             # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное тестирование
+│   ├── static-reports                     # Идеальные эталонные отчеты
+│       └── perfect-newman.html            # HTML-report
+├── scripts/                               # Папка исполняемых скриптов и примеров кода
+│   ├── stress-test.ps1                    # [Windows] Скрипт параллельного запуска 10 визуальных окон
+│   ├── stress-test.sh                     # [macOS/Linux] Скрипт параллельного запуска 10 фоновых потоков
+│   └── postman-js-framework/              # Примеры чистого JavaScript-кода (Chai.js) для код-ревью
+│       ├── crud-and-contracts.js          # Тесты CRUD-операций и контрактных проверок
+│       ├── integration-and-e2e.js         # Интеграционные сценарии и сквозные бизнес-тесты
+│       ├── security-owasp-audit.js        # Тестирование безопасности (BOLA, SQLi, OWASP Top 10)
+│       ├── network-transport-checks.js    # Проверки сетевого и транспортного уровней
+│       └── performance-and-ratelimits.js  # Проверка лимитов, нагрузочное и стресс-тестирование
+├── .gitignore                             # Список файлов и папок, скрытых от отправки на GitHub 
+├── package.json                           # Конфигурация Node.js и скрипты запуска всего фреймворка
+└── README.md                              # Главный путеводитель по проекту
 
 ```
 
