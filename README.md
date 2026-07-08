@@ -6,12 +6,12 @@
 ##  ☑️ Project Goal
 <h6>Глубокий аудит бизнес-логики, контрактных обязательств API и устойчивости системы к взлому и перегрузкам.</h6>
 
-## **Interactive API Docs:** [🗲 **Postman Publish Documentation 🗲 Ultimate API Quality Gate | Oort Depot**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
+## **Interactive API Docs:** [**Postman Publish Documentation 🔹 Ultimate API Quality Gate | Oort Depot**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
 <h6>Для быстрой оценки масштаба фреймворка, архитектуры папок и живого интерфейса коллекции без импорта файлов.</h6>
 
 ![Uploading giphy.gif…](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHY2ZHhjemNhNmc5bWZtOGRwOWdsOTd0MTcwZXFicjFkbWplZnB5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SZPSgFFbSTFEn6dTHh/giphy.gif)
 
-## **Interactive Workspace:** [🗲 **Postman Workspace 🗲 API Automation Framework: Security Audit, Stress & Logic | Oort Depot**](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot)
+## **Interactive Workspace:** [**Postman Workspace 🔹 API Automation Framework: Security Audit, Stress & Logic | Oort Depot**](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot)
 <h6>Для проведения сквозного анализа архитектуры тестов и выполнения запросов в реальном времени развернуто публичное облачное пространство.</h6>.
 
 ![Uploading giphy.gif2…](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanVubGx4ODZnZ2ZzdzN1NXJ1ZnE4Y281cGY1M3Ztcnc5ZmJ4ZThrOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/axbvhv7X8mvOCpj5fx/giphy.gif)
@@ -34,7 +34,7 @@
 ├── docs/                                    # Сопроводительная документация
 │   ├── qa-audit-insights.md                 # Аналитический аудит API (Security, OWASP Top 10)
 │   ├── bug-reports.md                       # Логи багов Jira со скриншотами
-│   ├── performance-testing.md               # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное тестирование
+│   ├── performance-testing.md               # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное и стресс-тестирование
 │   └── index.html                           # Интерактивный Newman Summary report (GitHub Pages)
 ├── scripts/                                 # Папка исполняемых скриптов и примеров кода
 │   ├── stress-test.ps1                      # [Windows] Скрипт параллельного запуска 10 визуальных окон
