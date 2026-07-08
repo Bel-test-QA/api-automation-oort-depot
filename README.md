@@ -89,8 +89,8 @@
 > **Эталонный отчет о тестировании (GitHub Pages):**
 > 
 > Так как публичная тестовая песочница (тестовый стенд) периодически обновляется сторонними пользователями, статические тестовые данные имеют свойство устаревать, что может приводить к ложноположительным результатам (False Positive):
-   * [Открыть интерактивный 🗲 HTML-отчет Newman](https://bel-test-qa.github.io/api-automation-oort-depot/).
-   * [Ознакомиться с экспертными выводами 🗲 QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md).
+   * [Открыть интерактивный 🔹 HTML-отчет Newman](https://bel-test-qa.github.io/api-automation-oort-depot/).
+   * [Ознакомиться с экспертными выводами 🔹 QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md).
    
 ---
 
