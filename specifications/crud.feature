@@ -2,8 +2,9 @@
 Feature: CRUD операции
 
   # =========================================================================
-  # USER STORY 6: CRUD ЗВЕЗДОЛЕТА (ПОЗИТИВНЫЙ)
-  # US-006 — Успешное управление звездолетом
+  # USER STORY 6: US-006 —Успешное управление звездолетом (CRUD)
+  # [Ссылка на Postman](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/sa8u9f1/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf)
+  #  
   # =========================================================================
    
     @starships-module @US-006 @crud @positive
