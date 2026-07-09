@@ -1,7 +1,7 @@
 @api-integration-tests
 Feature: Интеграционные тесты взаимодействия модулей 
 
- # =========================================================================
+  # =========================================================================
   # 📖 USER STORY 14: US-014 — Интеграция модулей флота и склада для создания погрузки 
   # Cсылка на Postman папку: https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/sd9cuvv/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf
   #
