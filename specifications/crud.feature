@@ -2,10 +2,10 @@
 Feature: CRUD операции
 
   # =========================================================================
-  # USER STORY 6: US-006 —Успешное управление звездолетом (CRUD)
+  # 📖 USER STORY 6: US-006 —Успешное управление звездолетом (CRUD)
   # Cсылка на Postman папку: https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/sa8u9f1/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf
   #
-  # Критерии приемки:(Acceptance Criteria)
+  # ✅ Критерии приемки:(Acceptance Criteria)
   # 1. API возвращает статус 201 Created или 200 OK при валидных запросах.
   # 2. Созданный объект доступен для чтения и соответствует переданной схеме.
   # 3. После удаления объект полностью стирается из системы (возвращает 404).
@@ -23,10 +23,10 @@ Feature: CRUD операции
       Then система возвращает статус 204 и объект больше не находится через GET
 
   # =========================================================================
-  # USER STORY 7: US-007 — Успешное управление грузом (CRUD)
+  # 📖 USER STORY 7: US-007 — Успешное управление грузом (CRUD)
   # Cсылка на Postman папку: https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/s4tmd9c/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf
   #
-  # Критерии приемки:(Acceptance Criteria)
+  # ✅ Критерии приемки:(Acceptance Criteria)
   # 1. Груз успешно регистрируется с любыми валидными типами данных (статус 201)
   # 2. Метод GET отображает новый объект в списке всех грузов.
   # 3. Обновление веса или типа груза происходит без ошибок.
@@ -43,13 +43,13 @@ Feature: CRUD операции
       Then система возвращает статус 204 и объект больше не находится через GET
 
   # =========================================================================
-  # USER STORY 8: US-008 - Успешное управление погрузкой (CRUD)
+  # 📖 USER STORY 8: US-008 - Успешное управление погрузкой (CRUD)
   # Cсылка на Postman папку: https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/mp44u66/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf
   #
   # ✅ Критерии приемки:(Acceptance Criteria)
   # 1. Погрузка создается только на основе существующих ID звездолета и груза (статус 201)
-  # 2. 
-  # 3. 
+  # 2. Статус погрузки успешно изменяется по предусмотренной схеме (например, с "loading" на "cancelled").
+  # 3. История погрузок (GET) отображает актуальное состояние операции.
   # =========================================================================  
 
    @shipments-module @US-008 @crud @positive
@@ -63,8 +63,13 @@ Feature: CRUD операции
     Then финальный статус "cancelled" корректно фиксируется в базе данных
 
   # =========================================================================
-  # USER STORY 9: CRUD ЗВЕЗДОЛЕТА (НЕГАТИВНЫЙ)
-  # US-009 - Создание звездолета с ошибкой валидации
+  # 📖 USER STORY 9: US-009 - Создание звездолета с ошибкой валидации (CRUD НЕГАТИВНЫЙ)
+  # Cсылка на Postman папку: https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/po1rwiu/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf
+  #
+  # ✅ Критерии приемки:(Acceptance Criteria)
+  # 1. Валидация должна срабатывать на стороне API (статус 400).
+  # 2. Дубликаты бизнес-ключей (имен) не должны попадать в БД.
+  # 3. Текст ошибки должен содержать детали: "Звездолет с таким именем уже существует" .
   # =========================================================================  
    
    @starships-module @US-009 @crud @negative
