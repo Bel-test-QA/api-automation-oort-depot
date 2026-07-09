@@ -2,13 +2,13 @@
 Feature: Сквозные бизнес-сценарии (End-to-End)
 
   # =========================================================================
-  # 📖 USER STORY 15: US-015 — Интеграция модулей флота и склада для создания погрузки (E2E)
-  # Cсылка на Postman папку: https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/sd9cuvv/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf
+  # 📖 USER STORY 15: US-015 — Сквозное тестирование бизнес-цикла (E2E)
+  # Cсылка на Postman папку: https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/7xmt25q/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf
   #
   # ✅ Критерии приемки:(Acceptance Criteria)
-  # 1. Данные для погрузки успешно подтягиваются из реестров (звездолеты и грузы).
-  # 2. Созданная погрузка корректно отображается в информации о «текущей загрузке» конкретного корабля.
-  # 3. Функция отмены погрузки возвращает задействованные ресурсы в статус «Доступен».
+  # 1. Весь сценарий проходит без ошибок (статусы 200, 201).
+  # 2. История погрузок корректно логирует все действия.
+  # 3. После завершения цикла система позволяет полностью удалить объекты (статус 204) без нарушения целостности БД.
   # =========================================================================
 
   
