@@ -33,7 +33,8 @@
 │   └── end-to-end.feature                   # Сквозные бизнес-сценарии (User Stories: US-015)
 ├── docs/                                    # Сопроводительная документация
 │   ├── qa-audit-insights.md                 # Аналитический аудит API (Security, OWASP Top 10)
-│   ├── bug-reports.md                       # Логи багов Jira со скриншотами
+│   ├── bug-reports/                         # Баг-репорты Jira со скриншотами (BUG-001.md - BUG-009.md)
+│       └── images                           # Скриншоты фиксации багов
 │   ├── performance-testing.md               # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное и стресс-тестирование
 │   └── index.html                           # Интерактивный Newman Summary report (GitHub Pages)
 ├── scripts/                                 # Папка исполняемых скриптов и примеров кода
