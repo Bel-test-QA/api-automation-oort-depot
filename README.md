@@ -153,7 +153,7 @@
 
 Чтобы не загромождать кодовую базу, важная аналитическая и тестовая документация вынесена в отдельные файлы:
 * 🕵️‍♂️ [QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md) — критический анализ архитектуры API, обнаруженные узкие места и рекомендации по улучшению безопасности.
-* 🧱 [Load & Stress Test Suite | Newman Ready](.docs/performance-testing.md) - содержит инструкцию по имитации стресс-нагрузки и проверки Rate Limiting (CLI Скрипты), а также по встроенному нагрузочному тестированию (Postman Load Testing)
+* 🧱 [Load & Stress Test Suite | Newman Ready](./docs/performance-testing.md) - содержит инструкцию по имитации стресс-нагрузки и проверки Rate Limiting (CLI Скрипты), а также по встроенному нагрузочному тестированию (Postman Load Testing)
 * 🕷️ [Jira Bug Reports](./docs/bug-reports) — симуляция баг-трекера Jira. Содержит подробные карточки дефектов (Steps to Reproduce, Expected/Actual), найденных в ходе автоматизации, со скриншотами.
 * 🥒 [BDD Сценарии (Gherkin)](./specifications) — примеры тест-дизайна для CRUD (позитивные/негативные кейсы) и Integration/E2E цепочек, на основе которых писались скрипты в Postman.
 
