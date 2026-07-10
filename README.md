@@ -34,7 +34,7 @@
 ├── docs/                                    # Сопроводительная документация
 │   ├── qa-audit-insights.md                 # Аналитический аудит API (Security, OWASP Top 10)
 │   ├── bug-reports/                         # Баг-репорты Jira со скриншотами (BUG-001.md - BUG-009.md)
-│       └── images                           # Скриншоты фиксации багов
+│       └── images/                          # Скриншоты фиксации багов (bug-001.png - bug-009.png)
 │   ├── performance-testing.md               # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное и стресс-тестирование
 │   └── index.html                           # Интерактивный Newman Summary report (GitHub Pages)
 ├── scripts/                                 # Папка исполняемых скриптов и примеров кода
