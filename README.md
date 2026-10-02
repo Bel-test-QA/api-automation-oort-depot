@@ -47,13 +47,15 @@
 │       ├── network-transport-checks.js      # Проверки сетевого и транспортного уровней
 │       └── performance-and-ratelimits.js    # Проверка лимитов, нагрузочное и стресс-тестирование
 ├── .gitignore                               # Список файлов и папок, скрытых от отправки на GitHub 
+├── Dockerfile                               # Инструкция сборки изолированного Docker-образа (Node.js/Newman)
+├── job.yaml                                 # Манифест Kubernetes Job для запуска автотестов в кластере
 ├── package.json                             # Конфигурация Node.js и скрипты запуска всего фреймворка
 └── README.md                                # Главный путеводитель по проекту
 
 ```
 
 ## 🧠 Tech Stack
-<p align="left"> <img src="https://img.shields.io/badge/-Postman-282C34?style=plastic&logo=postman&logoColor=FF6C37"/> <img src="https://img.shields.io/badge/-JavaScript-282C34?style=plastic&logo=javascript&logoColor=F7DF1E"/> <img src="https://img.shields.io/badge/-NPM-282C34?style=plastic&logo=NPM&logoColor=CB3837"/> <img src="https://img.shields.io/badge/-Node.js-282C34?style=plastic&logo=nodedotjs&logoColor=5FA04E"/> <img src="https://img.shields.io/badge/-NewmanCLI-FF6C37?style=plastic&logo&color=282C34"/> <img src="https://img.shields.io/badge/-GitHubActions-282C34?style=plastic&logo=githubactions&logoColor=2088FF"/></p>
+<p align="left"> <img src="https://img.shields.io/badge/-Postman-282C34?style=plastic&logo=postman&logoColor=FF6C37"/> <img src="https://img.shields.io/badge/-JavaScript-282C34?style=plastic&logo=javascript&logoColor=F7DF1E"/> <img src="https://img.shields.io/badge/-NPM-282C34?style=plastic&logo=NPM&logoColor=CB3837"/> <img src="https://img.shields.io/badge/-Node.js-282C34?style=plastic&logo=nodedotjs&logoColor=5FA04E"/> <img src="https://img.shields.io/badge/-NewmanCLI-FF6C37?style=plastic&logo&color=282C34"/> <img src="https://img.shields.io/badge/-GitHubActions-282C34?style=plastic&logo=githubactions&logoColor=2088FF"/> <img src="https://img.shields.io/badge/-Docker-282C34?style=plastic&logo=docker&logoColor=2496ED"/> <img src="https://img.shields.io/badge/-Kubernetes-282C34?style=plastic&logo=kubernetes&logoColor=326CE5"/></p>
 
 <h6>Проект представляет собой автономный API Automation Framework, построенный на базе следующего стека:</h6>
 
@@ -61,6 +63,8 @@
 * **JavaScript** — написание динамических скриптов, pre-request сценариев, кастомных ассертов и цепочек авторизации (Chaining).
 * **Newman CLI** — консольный раннер для запуска коллекций в изолированном окружении (`postman-tests.yml`).
 * **GitHub Actions** — CI/CD пайплайн для автоматического запуска регрессионного тестирования при пушах (`postman-tests.yml`).
+* **Docker** — контейнеризация фреймворка, создание изолированных образов (Dockerfile) на базе Node.js/Alpine для гарантированного запуска тестов на любой ОС.
+* **Kubernetes (Minikube)** — оркестрация контейнеров, развертывание и автоматический запуск автотестов в изолированном контуре кластера через манифесты Job (`YAML`).
 
 
 ## ⚡️ Architecture & Features
@@ -73,6 +77,8 @@
 * **Design-First approach support:** Фреймворк адаптирован для работы со спецификациями OpenAPI `SPECS`. Это позволяет проводить Contract Testing на соответствие эталонной схеме данных.
 * **BDD подход (Gherkin):** Сценарии написаны как исполняемые спецификации (`Given / When / Then`), что делает их прозрачными для бизнеса и готовыми к миграции на Cucumber/SpecFlow.
 * **Mocking Service:** Использование Postman Mock Server для для изоляции тестов при нестабильности стенда.
+* **Containerization & Orchestration:** Проект полностью контейнеризирован с использованием **Docker** (подготовлен оптимизированный `Dockerfile` на базе Node.js/Alpine) и интегрирован с **Kubernetes** через манифест `Job (YAML)`. Это обеспечивает гарантированную изоляцию, оркестрацию и автоматический запуск автотестов внутри закрытого контура кластера.
+
   
 ---
 
@@ -132,11 +138,39 @@
      ```
      В браузере автоматически откроется интерактивный Allure-отчет.
 
+---
+
+### 🐳 Запуск в изолированном контейнере (Docker & Kubernetes)
+<h6>Подходит для DevOps-инженеров и Automation QA, работающих с микросервисной архитектурой.</h6>
+
+Фреймворк полностью контейнеризирован и готов к запуску в изолированном контуре локального кластера.
+
+1. **Запустите ваш локальный Kubernetes-кластер:**
+   ```bash
+   minikube start
+   ```
+
+2. **Соберите Docker-образ со всеми тестами напрямую внутри Minikube:**
+   ```bash
+   minikube image build -t postman-tests:latest .
+   ```
+   *Docker автоматически установит легковесный дистрибутив Node.js, развернет Newman со всеми зависимостями и упакует внутрь ваши коллекции.*
+
+3. **Разверните задачу в кластере Kubernetes одной командой:**
+   ```bash
+   kubectl apply -f job.yaml
+   ```
+
+4. **Посмотрите логи выполнения автотестов в реальном времени из контейнера:**
+   ```bash
+   kubectl logs -f job/postman-api-tests
+   ```
+   *После окончания прогона вы можете очистить память кластера командой `kubectl delete -f job.yaml`.*
 
 ---
 
 ### 🔄 Запуск через CI/CD в 1 клик
-<h6>Подходит для DevOps и Automation QA</h6>
+<h6>Подходит для DevOps-инженеров и Automation QA</h6>
 
 1. Перейдите на вкладку **Actions** в верхней панели этого репозитория.
 2. В левом меню выберите рабочий процесс **Automated Postman Tests**.
