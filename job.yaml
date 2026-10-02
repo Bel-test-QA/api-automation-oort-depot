@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: postman-api-tests
+spec:
+  template:
+    spec:
+      containers:
+      - name: postman-runner
+        image: postman-tests:latest
+        imagePullPolicy: Never  # Берем созданный локальный образ
+      restartPolicy: Never
+  backoffLimit: 1
