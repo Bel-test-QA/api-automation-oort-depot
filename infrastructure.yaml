@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infrastructure-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservices-infra
+  template:
+    metadata:
+      labels:
+        app: microservices-infra
+    spec:
+      containers:
+      # 1. Сервер баз данных логов (Elasticsearch)
+      - name: elasticsearch
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.17.10
+        ports:
+        - containerPort: 9200
+        environment:
+        - discovery.type=single-node
+        - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+
+      # 2. Веб-интерфейс логов (Kibana)
+      - name: kibana
+        image: docker.elastic.co/kibana/kibana:7.17.10
+        ports:
+        - containerPort: 5601
+        environment:
+        - ELASTICSEARCH_HOSTS=http://localhost:9200
+
+      # 3. Служебный менеджер Кафки (Zookeeper)
+      - name: zookeeper
+        image: confluentinc/cp-zookeeper:7.3.0
+        ports:
+        - containerPort: 2181
+        environment:
+        - ZOOKEEPER_CLIENT_PORT=2181
+        - ZOOKEEPER_TICK_TIME=2000
+
+      # 4. Сама Очередь Сообщений (Apache Kafka)
+      - name: kafka
+        image: confluentinc/cp-kafka:7.3.0
+        ports:
+        - containerPort: 9092
+        environment:
+        - KAFKA_BROKER_ID: 1
+        - KAFKA_ZOOKEEPER_CONNECT: localhost:2181
+        - KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+        - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana-service
+spec:
+  type: NodePort
+  selector:
+    app: microservices-infra
+  ports:
+  - port: 5601
+    targetPort: 5601
+    nodePort: 30001 # Открываем этот порт наружу для твоего браузера
+
+
