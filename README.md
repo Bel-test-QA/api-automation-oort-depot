@@ -47,6 +47,7 @@
 │       ├── network-transport-checks.js      # Проверки сетевого и транспортного уровней
 │       └── performance-and-ratelimits.js    # Проверка лимитов, нагрузочное и стресс-тестирование
 ├── .gitignore                               # Список файлов и папок, скрытых от отправки на GitHub 
+├── docker-compose.yml                       # Конфигурация локальной инфраструктуры Apache Kafka и Kibana
 ├── Dockerfile                               # Инструкция сборки изолированного Docker-образа (Node.js/Newman)
 ├── job.yaml                                 # Манифест Kubernetes Job для запуска автотестов в кластере
 ├── package.json                             # Конфигурация Node.js и скрипты запуска всего фреймворка
