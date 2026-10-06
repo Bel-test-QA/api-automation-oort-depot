@@ -9,5 +9,14 @@ spec:
       - name: postman-runner
         image: postman-tests:latest
         imagePullPolicy: Never  # Берем созданный локальный образ
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            newman run collections/ultimate_api.postman_collection.json \
+            -e environments/qa_postman_environment.json \
+            -r cli,htmlextra,allure,elasticsearch \
+            --reporter-elasticsearch-url http://infrastructure-deployment:9200 \
+            --reporter-elasticsearch-index postman-logs \
+            --reporter-allure-export allure-results
       restartPolicy: Never
   backoffLimit: 1
