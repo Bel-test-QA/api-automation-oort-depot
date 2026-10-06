@@ -15,7 +15,7 @@ spec:
             newman run collections/ultimate_api.postman_collection.json \
             -e environments/qa_postman_environment.json \
             -r cli,htmlextra,allure,elasticsearch \
-            --reporter-elasticsearch-url http://infrastructure-deployment:9200 \
+            --reporter-elasticsearch-url http://elasticsearch-service:9200 \
             --reporter-elasticsearch-index postman-logs \
             --reporter-allure-export allure-results
       restartPolicy: Never
