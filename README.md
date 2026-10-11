@@ -40,6 +40,8 @@
 ├── scripts/                                 # Папка исполняемых скриптов и примеров кода
 │   ├── stress-test.ps1                      # [Windows] Скрипт параллельного запуска 10 визуальных окон
 │   ├── stress-test.sh                       # [macOS/Linux] Скрипт параллельного запуска 10 фоновых потоков
+│   ├── producer.js                          # Автономный JS-скрипт отправки событий погрузки звездолетов в топик Apache Kafka
+│   ├── consumer.js                          # Автономный JS-скрипт перехвата и валидации структуры сообщений из брокера Kafka
 │   └── postman-js-framework/                # Примеры чистого JavaScript-кода (Chai.js) для код-ревью
 │       ├── crud-and-contracts.js            # Тесты CRUD-операций и контрактных проверок
 │       ├── integration-and-e2e.js           # Интеграционные сценарии и сквозные бизнес-тесты
@@ -56,7 +58,8 @@
 ```
 
 ## 🧠 Tech Stack
-<p align="left"> <img src="https://img.shields.io/badge/-Postman-282C34?style=plastic&logo=postman&logoColor=FF6C37"/> <img src="https://img.shields.io/badge/-JavaScript-282C34?style=plastic&logo=javascript&logoColor=F7DF1E"/> <img src="https://img.shields.io/badge/-NPM-282C34?style=plastic&logo=NPM&logoColor=CB3837"/> <img src="https://img.shields.io/badge/-Node.js-282C34?style=plastic&logo=nodedotjs&logoColor=5FA04E"/> <img src="https://img.shields.io/badge/-NewmanCLI-FF6C37?style=plastic&logo&color=282C34"/> <img src="https://img.shields.io/badge/-GitHubActions-282C34?style=plastic&logo=githubactions&logoColor=2088FF"/> <img src="https://img.shields.io/badge/-Docker-282C34?style=plastic&logo=docker&logoColor=2496ED"/> <img src="https://img.shields.io/badge/-Kubernetes-282C34?style=plastic&logo=kubernetes&logoColor=326CE5"/></p>
+<p align="left"> <img src="https://img.shields.io/badge/-Postman-282C34?style=plastic&logo=postman&logoColor=FF6C37"/> <img src="https://img.shields.io/badge/-JavaScript-282C34?style=plastic&logo=javascript&logoColor=F7DF1E"/> <img src="https://img.shields.io/badge/-NPM-282C34?style=plastic&logo=NPM&logoColor=CB3837"/> <img src="https://img.shields.io/badge/-Node.js-282C34?style=plastic&logo=nodedotjs&logoColor=5FA04E"/> <img src="https://img.shields.io/badge/-NewmanCLI-FF6C37?style=plastic&logo&color=282C34"/> <img src="https://img.shields.io/badge/-GitHubActions-282C34?style=plastic&logo=githubactions&logoColor=2088FF"/> <img src="https://img.shields.io/badge/-Docker-282C34?style=plastic&logo=docker&logoColor=2496ED"/> <img src="https://img.shields.io/badge/-Kubernetes-282C34?style=plastic&logo=kubernetes&logoColor=326CE5"/></p> <img src="https://img.shields.io/badge/-ApacheKafka-282C34?style=plastic&logo=apachekafka&logoColor=231F20"/> 
+<img src="https://img.shields.io/badge/-Kibana-282C34?style=plastic&logo=kibana&logoColor=005571"/>
 
 <h6>Проект представляет собой автономный API Automation Framework, построенный на базе следующего стека:</h6>
 
@@ -66,6 +69,8 @@
 * **GitHub Actions** — CI/CD пайплайн для автоматического запуска регрессионного тестирования при пушах (`postman-tests.yml`).
 * **Docker** — контейнеризация фреймворка, создание изолированных образов (Dockerfile) на базе Node.js/Alpine для гарантированного запуска тестов на любой ОС.
 * **Kubernetes (Minikube)** — оркестрация контейнеров, развертывание и автоматический запуск автотестов в изолированном контуре кластера через манифесты Job (`YAML`).
+* **ELK Stack (Elasticsearch + Kibana)** — централизованная система логирования. База данных Elasticsearch собирает JSON-отчеты всего прогона Newman, а веб-интерфейс Kibana используется для сквозного мониторинга, фильтрации и анализа дефектов космического склада.
+* **Apache Kafka & Node.js Validators** — изолированный инфраструктурный контур очередей сообщений. Используется для симуляции и валидации асинхронных событий погрузки грузов на звездолеты через автономные JS-скрипты (`producer.js` / `consumer.js`).
 
 
 ## ⚡️ Architecture & Features
@@ -79,8 +84,10 @@
 * **BDD подход (Gherkin):** Сценарии написаны как исполняемые спецификации (`Given / When / Then`), что делает их прозрачными для бизнеса и готовыми к миграции на Cucumber/SpecFlow.
 * **Mocking Service:** Использование Postman Mock Server для для изоляции тестов при нестабильности стенда.
 * **Containerization & Orchestration:** Проект полностью контейнеризирован с использованием **Docker** (подготовлен оптимизированный `Dockerfile` на базе Node.js/Alpine) и интегрирован с **Kubernetes** через манифест `Job (YAML)`. Это обеспечивает гарантированную изоляцию, оркестрацию и автоматический запуск автотестов внутри закрытого контура кластера.
+* **Kibana Centralized Logging**: Интеграция всего тест-рана с поисковой базой данных. Все результаты проверок, статус-коды и ошибки валидации контрактов автоматически парсятся и отправляются в Elasticsearch для последующего анализа в Kibana.
+* **Async Event Simulation (Kafka)**: Подготовка инфраструктурного контура для тестирования асинхронного взаимодействия систем космического склада. Реализованы автономные скрипты-валидаторы на Node.js (KafkaJS), которые имитируют отправку (`producer.js`) и перехват (`consumer.js`) событий создания новых погрузок, проверяя целостность структуры и контрактов данных при передаче через топики брокера сообщений.
 
-  
+
 ---
 
 ## 🛸 Quick Start & User Guide
@@ -167,6 +174,49 @@
    kubectl logs -f job/postman-api-tests
    ```
    *После окончания прогона вы можете очистить память кластера командой `kubectl delete -f job.yaml`.*
+
+---
+
+### ☸️ Оркестрация в Kubernetes, Логирование & Очереди сообщений (ELK + Kafka)
+<h6> Инфраструктурный контур для DevOps-инженеров и Automation QA, работающих с микросервисной архитектурой.</h6>
+
+Автотесты и сервисы распределенной системы WMS (Elasticsearch, Kibana, Apache Kafka) упакованы в контейнеры и развернуты внутри локального кластера **Kubernetes (Minikube)**. 
+
+Сетевое взаимодействие между тестами и базой данных логов настроено через внутренние сервисы `ClusterIP`. Вывод графических интерфейсов наружу осуществляется через порты `NodePort`.
+
+**Инструкция по развертыванию контура:**
+
+1. **Запуск локального кластера Kubernetes:**
+   ```bash
+   minikube start --memory=4096 --cpus=2
+   ```
+
+2. **Сборка Docker-образа автотестов внутри кэша кластера:**
+   ```bash
+   minikube image build -t postman-tests:latest .
+   ```
+
+3. **Развертывание базовой инфраструктуры логов и очередей (Kafka, ES, Kibana):**
+   ```bash
+   kubectl apply -f infrastructure.yaml
+   ```
+
+4. **Запуск автоматического тест-рана всей коллекции Newman:**
+   ```bash
+   kubectl apply -f job.yaml
+   ```
+
+5. **Мониторинг логов прогона всей коллекции в Kibana:**
+   Получить локальный URL-адрес для входа в веб-интерфейс логирования:
+   ```bash
+   minikube service kibana-service --url
+   ```
+   *Перейдите по полученной ссылке в браузере, создайте индексный шаблон `postman-logs*`, выберите поле времени `@timestamp` и перейдите во вкладку **Discover** для анализа результатов тестов.*
+
+6. **Тестирование асинхронных очередей погрузки склада в Apache Kafka:**
+   * Пробросьте порт брокера наружу в первом терминале: `kubectl port-forward deployment/infrastructure-deployment 9092:9092`
+   * Запустите фонового слушателя во втором терминале: `node scripts/consumer.js`
+   * Отправьте симуляционное событие погрузки звездолета в третьем терминале: `node scripts/producer.js`
 
 ---
 
