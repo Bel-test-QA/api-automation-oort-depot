@@ -13,12 +13,12 @@ spec:
         args:
           - |
             newman run collections/ultimate_api.postman_collection.json \
-            -e environments/qa_postman_environment.json \
-            --suppress-exit-code \
-            -r cli,htmlextra,allure,elasticsearch \
-            --reporter-elasticsearch-url http://elasticsearch-service:9200 \
-            --reporter-elasticsearch-index postman-logs \
-            --reporter-allure-export allure-results
+              -e environments/qa_postman_environment.json \
+              --suppress-exit-code \
+              -r cli,elasticsearch \
+              --reporter-elasticsearch-url http://elasticsearch-service:9200 \
+              --reporter-elasticsearch-index postman-logs
       restartPolicy: Never
   backoffLimit: 1
+
 
