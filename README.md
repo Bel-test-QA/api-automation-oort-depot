@@ -1,18 +1,18 @@
 
 ## 💎 Project 1: API Automation Framework: Security Audit, Stress & Logic | Oort Depot
 
-Продвинутый инженерный фреймворк автотестов для системы управления складом (WMS), сфокусированный на бизнес-логике, безопасности и отказоустойчивости.
+Комплексный инженерный фреймворк автотестов для системы управления складом (WMS), сфокусированный на бизнес-логике, безопасности и отказоустойчивости.
 
 ##  ☑️ Project Goal
-<h6>Глубокий аудит бизнес-логики, контрактных обязательств API и устойчивости системы к взлому и перегрузкам.</h6>
+<h6>Тестирование бизнес-логики, валидация контрактов API, проверка отказоустойчивости и поиск критических уязвимостей.</h6>
 
 ## **Interactive API Docs:** [**Postman Publish Documentation 🔹 Ultimate API Quality Gate | Oort Depot**](https://documenter.getpostman.com/view/51804164/2sBXwsNAZ7)
-<h6>Для быстрой оценки масштаба фреймворка, архитектуры папок и живого интерфейса коллекции без импорта файлов.</h6>
+<h6>Просмотр коллекции в живом веб-интерфейсе Postman без импорта файлов.</h6>
 
 ![Uploading giphy.gif…](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHY2ZHhjemNhNmc5bWZtOGRwOWdsOTd0MTcwZXFicjFkbWplZnB5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SZPSgFFbSTFEn6dTHh/giphy.gif)
 
 ## **Interactive Workspace:** [**Postman Workspace 🔹 API Automation Framework: Security Audit, Stress & Logic | Oort Depot**](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot)
-<h6>Для проведения сквозного анализа архитектуры тестов и выполнения запросов в реальном времени развернуто публичное облачное пространство.</h6>.
+<h6>Просмотр и тестирование фреймворка в публичном рабочем пространстве.</h6>.
 
 ![Uploading giphy.gif2…](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanVubGx4ODZnZ2ZzdzN1NXJ1ZnE4Y281cGY1M3Ztcnc5ZmJ4ZThrOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/axbvhv7X8mvOCpj5fx/giphy.gif)
 
@@ -35,14 +35,14 @@
 │   ├── qa-audit-insights.md                 # Аналитический аудит API (Security, OWASP Top 10)
 │   ├── bug-reports/                         # Баг-репорты Jira со скриншотами (BUG-001.md - BUG-009.md)
 │       └── images/                          # Скриншоты фиксации багов (bug-001.png - bug-009.png)
-│   ├── performance-testing.md               # ВЫДЕЛЕННЫЙ БЛОК: нагрузочное и стресс-тестирование
+│   ├── performance-testing.md               # Нагрузочное и стресс-тестирование
 │   └── index.html                           # Интерактивный Newman Summary report (GitHub Pages)
 ├── scripts/                                 # Папка исполняемых скриптов и примеров кода
 │   ├── stress-test.ps1                      # [Windows] Скрипт параллельного запуска 10 визуальных окон
 │   ├── stress-test.sh                       # [macOS/Linux] Скрипт параллельного запуска 10 фоновых потоков
-│   ├── producer.js                          # Автономный JS-скрипт отправки событий погрузки звездолетов в топик Apache Kafka
-│   ├── consumer.js                          # Автономный JS-скрипт перехвата и валидации структуры сообщений из брокера Kafka
-│   └── postman-js-framework/                # Примеры чистого JavaScript-кода (Chai.js) для код-ревью
+│   ├── producer.js                          # JS-скрипт отправки событий погрузки звездолетов в топик Apache Kafka
+│   ├── consumer.js                          # JS-скрипт перехвата и валидации структуры сообщений из брокера Kafka
+│   └── postman-js-framework/                # Примеры JavaScript-кода (Chai.js)
 │       ├── crud-and-contracts.js            # Тесты CRUD-операций и контрактных проверок
 │       ├── integration-and-e2e.js           # Интеграционные сценарии и сквозные бизнес-тесты
 │       ├── security-owasp-audit.js          # Тестирование безопасности (BOLA, SQLi, OWASP Top 10)
@@ -64,17 +64,17 @@
 <h6>Проект представляет собой автономный API Automation Framework, построенный на базе следующего стека:</h6>
 
 * **Postman** — среда разработки автотестов, тест-дизайна и валидации контрактов.
-* **JavaScript** — написание динамических скриптов, pre-request сценариев, кастомных ассертов и цепочек авторизации (Chaining).
-* **Newman CLI** — консольный раннер для запуска коллекций в изолированном окружении (`postman-tests.yml`).
-* **GitHub Actions** — CI/CD пайплайн для автоматического запуска регрессионного тестирования при пушах (`postman-tests.yml`).
-* **Docker** — контейнеризация фреймворка, создание изолированных образов (Dockerfile) на базе Node.js/Alpine для гарантированного запуска тестов на любой ОС.
-* **Kubernetes (Minikube)** — оркестрация контейнеров, развертывание и автоматический запуск автотестов в изолированном контуре кластера через манифесты Job (`YAML`).
-* **ELK Stack (Elasticsearch + Kibana)** — централизованная система логирования. База данных Elasticsearch собирает JSON-отчеты всего прогона Newman, а веб-интерфейс Kibana используется для сквозного мониторинга, фильтрации и анализа дефектов космического склада.
-* **Apache Kafka & Node.js Validators** — изолированный инфраструктурный контур очередей сообщений. Используется для симуляции и валидации асинхронных событий погрузки грузов на звездолеты через автономные JS-скрипты (`producer.js` / `consumer.js`).
+* **JavaScript** — написание скриптов автоматизации, включая подготовку данных (Pre-request) и проверку ответов (Tests/Assertions).
+* **Newman CLI** — консольный раннер для запуска Postman-коллекций в CI/CD пайплайне (automated-tests.yml).
+* **GitHub Actions** — CI/CD пайплайн для автоматического запуска регрессионного тестирования по ручному триггеру (`workflow_dispatch`).
+* **Docker** — упаковка автотестов в контейнер `Dockerfile` для гарантированного запуска на любом компьютере или сервере без настройки окружения. 
+* **Kubernetes (Minikube)** — запуск автотестов внутри локального K8s-кластера с помощью манифеста `job.yaml` для симуляции реальной микросервисной среды.
+* **ELK Stack (Elasticsearch + Kibana)** — сбор и визуализация результатов. Тесты отправляют JSON-отчеты в Elasticsearch, а через Kibana настроены дашборды для удобного анализа упавших тестов.
+* **Apache Kafka** — тестирование асинхронной логики. Скрипты `producer.js` и `consumer.js` имитируют отправку и получение событий о создании новой погрузки.
 
 
 ## ⚡️ Architecture & Features
-* **Zero Hardcode Logic:** Полное отсутствие статических данных. Все ID, токены и параметры генерируются динамически и передаются по цепочке (Chaining).
+* **Zero Hardcode Logic:** Все ID, токены и параметры генерируются динамически и передаются по цепочке (Chaining), исключение: папки с негативными тестами.
 * **Performance:** Нагрузочное тестирование (Stress Testing) через параллельный запуск 10 инстансов Newman.
 * **Security & SQLi:** Тестирование по стандартам `OWASP API Security Top 10`, включая проверку на SQL-инъекции.
 * **Smart Scripting:** Использование циклов `forEach` для глубокой валидации массивов данных и типов (Schema Validation).
