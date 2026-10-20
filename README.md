@@ -134,7 +134,7 @@
      
       *Полная команда:*
     ```bash
-    newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,htmlextra`
+    newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,htmlextra
     ```
   
    * **Продвинутый отчет Allure Report**
