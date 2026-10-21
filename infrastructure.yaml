@@ -21,6 +21,8 @@ spec:
         env:
         - name: discovery.type
           value: "single-node"
+        - name: network.host       #  ДОБАВЛЯЕМ прослушку всех интерфейсов внутри кластера
+          value: "0.0.0.0"  
         - name: ES_JAVA_OPTS
           value: "-Xms512m -Xmx512m"
 
