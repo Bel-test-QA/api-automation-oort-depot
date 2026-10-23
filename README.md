@@ -32,7 +32,7 @@
 │   ├── integration.feature                  # Тесты взаимодействия модулей (User Stories: US-014)
 │   └── end-to-end.feature                   # Сквозные бизнес-сценарии (User Stories: US-015)
 ├── docs/                                    # Сопроводительная документация
-│   ├── qa-audit-insights.md                 # Аналитический аудит API (Security, OWASP Top 10)
+│   ├── qa-audit-insights.md                 # Анализ уязвимостей и производительности API
 │   ├── bug-reports/                         # Баг-репорты Jira со скриншотами (BUG-001.md - BUG-009.md)
 │       └── images/                          # Скриншоты фиксации багов (bug-001.png - bug-009.png)
 │   ├── performance-testing.md               # Нагрузочное и стресс-тестирование
