@@ -1,5 +1,6 @@
 FROM node:18-alpine
-RUN npm install -g newman
+# Добавляем установку репортера для Эластика
+RUN npm install -g newman newman-reporter-elasticsearch
 WORKDIR /app
 COPY collections/ ./collections/
 COPY environments/ ./environments/
