@@ -107,7 +107,6 @@
 ---
 
 ### 🐙 Полное клонирование проекта (через Git)
-<h6>Подходит для технических специалистов и QA-команды</h6>
 
 1. **Клонируйте репозиторий:**
    ```bash
@@ -134,7 +133,7 @@
     newman run collections/ultimate_api.postman_collection.json -e environments/qa_postman_environment.json -r cli,htmlextra
     ```
   
-   * **Продвинутый отчет Allure Report**
+   * **Отчет Allure Report**
      Для этого у вас на ПК должен быть установлен Allure CLI (`brew install allure` на Mac или `scoop install allure` на Win).
      Запустите сбор результатов, а затем откройте отчет:
      ```bash
@@ -146,9 +145,6 @@
 ---
 
 ### 🐳 Запуск в изолированном контейнере (Docker & Kubernetes)
-<h6>Подходит для DevOps-инженеров и Automation QA, работающих с микросервисной архитектурой.</h6>
-
-Фреймворк полностью контейнеризирован и готов к запуску в изолированном контуре локального кластера.
 
 1. **Запустите ваш локальный Kubernetes-кластер:**
    ```bash
@@ -175,11 +171,11 @@
 ---
 
 ### ☸️ Оркестрация в Kubernetes, Логирование & Очереди сообщений (ELK + Kafka)
-<h6> Инфраструктурный контур для DevOps-инженеров и Automation QA, работающих с микросервисной архитектурой.</h6>
 
-Автотесты и сервисы распределенной системы WMS (Elasticsearch, Kibana, Apache Kafka) упакованы в контейнеры и развернуты внутри локального кластера **Kubernetes (Minikube)**. 
-
-Сетевое взаимодействие между тестами и базой данных логов настроено через внутренние сервисы `ClusterIP`. Вывод графических интерфейсов наружу осуществляется через порты `NodePort`.
+<h6>Настройка сети:
+• Тесты и Elasticsearch: общаются внутри кластера напрямую через ClusterIP.
+• Kibana (UI): выведена наружу через NodePort (открывается командой minikube service).
+• Apache Kafka: работает внутри кластера, для локальных скриптов доступ открывается через Port-Forwarding (порт 9092).</h6>
 
 **Инструкция по развертыванию контура:**
 
@@ -218,7 +214,6 @@
 ---
 
 ### 🔄 Запуск через CI/CD в 1 клик
-<h6>Подходит для DevOps-инженеров и Automation QA</h6>
 
 1. Перейдите на вкладку **Actions** в верхней панели этого репозитория.
 2. В левом меню выберите рабочий процесс **Automated Postman Tests**.
@@ -233,12 +228,11 @@
 
 ##  Дополнительные материалы проекта
 
-Чтобы не загромождать кодовую базу, важная аналитическая и тестовая документация вынесена в отдельные файлы:
-* 🕵️‍♂️ [QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md) — критический анализ архитектуры API, обнаруженные узкие места и рекомендации по улучшению безопасности.
-* 🧱 [Load & Stress Test Suite | Newman Ready](./docs/performance-testing.md) - содержит инструкцию по имитации стресс-нагрузки и проверки Rate Limiting (CLI Скрипты), а также по встроенному нагрузочному тестированию (Postman Load Testing)
-* 🕷️ [Jira Bug Reports](./docs/bug-reports) — симуляция баг-трекера Jira. Содержит подробные карточки дефектов (Steps to Reproduce, Expected/Actual), найденных в ходе автоматизации, со скриншотами.
-* 🥒 [BDD Сценарии (Gherkin)](./specifications) — примеры тест-дизайна для CRUD (позитивные/негативные кейсы) и Integration/E2E цепочек, на основе которых писались скрипты в Postman.
-
+* 🕵️‍♂️ [QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md) — анализ уязвимостей и производительности API
+* 🧱 [Load & Stress Test Suite | Newman Ready](./docs/performance-testing.md) - инструкция по нагрузочному и стрес-тестированию, проверки Rate Limiting
+* 🕷️ [Jira Bug Reports](./docs/bug-reports) — баг-репорты Jira со скриншотами
+* 🥒 [BDD Сценарии (Gherkin)](./specifications) — примеры тест-дизайна для CRUD/Integration/E2E цепочек
+* 👨‍💻 [Postman JS](./scripts/postman-js-framework)- примеры JavaScript-кода (Chai.js)
 
 
 
