@@ -61,29 +61,22 @@ spec:
         - name: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
           value: "1"
 ---
+# Единый сервис-комбайн для всего пода
 apiVersion: v1
 kind: Service
 metadata:
-  name: kibana-service
+  name: microservices-infra-service
 spec:
-  type: NodePort
+  type: NodePort 
   selector:
     app: microservices-infra
   ports:
-  - port: 5601
-    targetPort: 5601
-    nodePort: 30001
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: elasticsearch-service
-spec:
-  selector:
-    app: microservices-infra
-  ports:
-  - port: 9200
-    targetPort: 9200
-
+    - name: kibana
+      port: 5601
+      targetPort: 5601
+      nodePort: 30001
+    - name: elasticsearch
+      port: 9200
+      targetPort: 9200
 
 
