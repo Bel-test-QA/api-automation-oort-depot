@@ -14,7 +14,7 @@
 * **Критерии успеха (Метрики):** Average Latency `is less then` 3000 ms.
 
 > [!NOTE]
-> *Инструкция **Postman***: [Performance Testing](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/46upf7m/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf)
+> *Полная Инструкция **Postman***: [Performance Testing](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/46upf7m/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf)
 
 ### 🧨 Имитация стресс-нагрузки и проверка Rate Limiting (CLI Скрипты)
 
