@@ -16,9 +16,10 @@ spec:
               -e environments/qa_postman_environment.json \
               --suppress-exit-code \
               -r cli,elasticsearch \
-              --reporter-elasticsearch-url http://elasticsearch-service:9200 \
+              --reporter-elasticsearch-url http://microservices-infra-service:9200 \
               --reporter-elasticsearch-index postman-logs
       restartPolicy: Never
   backoffLimit: 1
+
 
 
