@@ -1,11 +1,11 @@
 ## 🧱 Нагрузочное и Стресс-тестирование (Load & Stress Test Suite | Newman Ready)
 
-<h6>В проекте реализовано два независимых подхода к тестированию производительности API: встроенный инструмент Postman Performance и кастомные инженерные скрипты автоматизации.</h6>
+<h6>В проекте реализовано два независимых подхода к тестированию производительности API:</h6>
 
 ### 🏗 Встроенное нагрузочное тестирование (Postman Load Testing)
 
 ---
-<h6>Используется непосредственно внутри интерфейса Postman для замера Latency (задержек) конкретных критически важных эндпоинтов и проверки их соответствия SLA (Service Level Agreement).</h6>
+<h6>Используется внутри интерфейса Postman для замера Latency (задержек) конкретных критически важных эндпоинтов и проверки их соответствия SLA (Service Level Agreement).</h6>
 
 **⚙️ Профиль базовой нагрузки:**
 * **Load Profile:** Fixed (Постоянная нагрузка)
@@ -14,12 +14,12 @@
 * **Критерии успеха (Метрики):** Average Latency `is less then` 3000 ms.
 
 > [!NOTE]
-> *Подробная инструкция по ручному запуску этого профиля внутри **Postman***: [Performance Testing](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/46upf7m/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf)
+> *Инструкция **Postman***: [Performance Testing](https://www.postman.com/bel-test-qa-1996072/api-automation-framework-security-audit-stress-logic-oort-depot/folder/46upf7m/ultimate-api-quality-gate-oort-depot?action=share&creator=51804164&active-environment=51804164-40b20e69-ba89-4ed1-84e1-9819229903cf)
 
 ### 🧨 Имитация стресс-нагрузки и проверка Rate Limiting (CLI Скрипты)
 
 ---
-<h6>Для проверки стабильности сервера при массовом спаме запросов, удержания соединений (`ECONNRESET`) и корректности выдачи ошибки `429 Too Many Requests` разработаны автоматические скрипты параллельного запуска.</h6>
+<h6>Скрипты для проверки стабильности сервера при массовом спаме запросов.</h6>
 
 **Они имитируют многопоточную нагрузку, запуская 10 независимых потоков Newman CLI одновременно:**
 * **Для Windows (PowerShell):** [`scripts/stress-test.ps1`](../scripts/stress-test.ps1) — параллельный запуск тестов в 10 отдельных визуальных окнах.
