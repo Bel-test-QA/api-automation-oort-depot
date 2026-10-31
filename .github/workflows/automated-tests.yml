@@ -46,3 +46,27 @@ jobs:
         name: allure-report
         path: allure-report/
         retention-days: 5
+
+
+# =========================================================================
+# Пример реализации Quality Gate для Production-пайплайна
+#
+# В данном воркфлоу выше используется 'continue-on-error: true',
+# чтобы гарантированно сгенерировать и скачать Allure/HTML отчеты при любых падениях.
+#
+# Ниже показано, как этот фреймворк блокирует реальный деплой в продакшен:
+# 1. Шаг тестов запускается БЕЗ 'continue-on-error' (любая ошибка прерывает ветку).
+# 2. Шаги отчетов собираются принудительно через 'if: always()'.
+# 3. Шаг деплоя срабатывает только при 'if: success()' (если код раннера строго 0).
+#
+# - name: Run Postman Tests (Production Mode)
+#   run: newman run collections/ultimate_api.postman_collection.json ...
+#
+# - name: Build Reports (Always)
+#   if: always()
+#   run: allure generate allure-results ...
+#
+# - name: Deploy to Live System
+#   if: success()
+#   run: echo "Блокировка отсутствует. Запуск деплоя микросервисов..."
+# =========================================================================
