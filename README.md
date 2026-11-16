@@ -229,6 +229,7 @@
 
 ##  Дополнительные материалы проекта
 
+* 🎥 [Video Overview: видео-обзор работы API фреймворка](https://disk.yandex.ru/i/TaLV9dmSni2SVQ) — полный разбор логики тестов, Docker, Kubernetes и CI/CD
 * 🕵️‍♂️ [QA Audit: Summary & Critical Insights](./docs/qa-audit-insights.md) — анализ уязвимостей и производительности API
 * 🧱 [Load & Stress Test Suite | Newman Ready](./docs/performance-testing.md) - инструкция по нагрузочному и стрес-тестированию, проверки Rate Limiting
 * 🕷️ [Jira Bug Reports](./docs/bug-reports) — баг-репорты Jira со скриншотами
