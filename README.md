@@ -33,8 +33,8 @@
 │   └── end-to-end.feature                   # Сквозные бизнес-сценарии (User Stories: US-015)
 ├── docs/                                    # Сопроводительная документация
 │   ├── qa-audit-insights.md                 # Анализ уязвимостей и производительности API
-│   ├── bug-reports/                         # Баг-репорты Jira со скриншотами (BUG-001.md - BUG-009.md)
-│       └── images/                          # Скриншоты фиксации багов (bug-001.png - bug-009.png)
+│   ├── bug-reports/                         # Баг-репорты Jira со скриншотами (BUG-001.md - BUG-010.md)
+│       └── images/                          # Скриншоты фиксации багов (bug-001.png - bug-010.png)
 │   ├── performance-testing.md               # Нагрузочное и стресс-тестирование
 │   └── index.html                           # Интерактивный Newman Summary report (GitHub Pages)
 ├── scripts/                                 # Папка исполняемых скриптов и примеров кода
